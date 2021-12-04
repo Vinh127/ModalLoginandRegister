@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;400&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -37,7 +52,7 @@
   &__layout {
     display: flex;
     width: 819px;
-    height: 487px;
+    height: 484px;
 
     &_left {
       display: flex;
@@ -48,10 +63,9 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      max-width: 317px;
       width: 317px;
-      min-height: 566px;
-      max-width: 566px ;
+      max-width: 317px;
+      height: 100%;
 
       img {
         width: auto;
@@ -62,7 +76,7 @@
     &_right {
       width: calc(100% - 317px);
       max-width: 100%;
-      padding: 40px 50px;
+      padding: 17px 45px;
       height: 100%;
 
       &_form {
@@ -80,9 +94,6 @@
           margin: 13px 0px;
           background-color: #f6f6f7;
 
-          &_radio {
-           
-          }
           input {
             padding: 3px 12px;
             background-color: #f6f6f7;
@@ -94,15 +105,13 @@
             max-width: 381px;
             font-size: 14px;
             font-weight: 400;
-            
           }
 
           &_error {
             position: absolute;
             color: red;
-            top: 50%;
-            right: 0px;
-            transform: translateX(-50%);
+            top: 30%;
+            right: 10px;
             margin: 0px;
           }
         }
@@ -111,11 +120,11 @@
           text-align: center;
           margin-bottom: 15px;
           width: 100%;
-          color: rgba(0,0,0,.65);
+          color: rgba(0, 0, 0, 0.65);
           font-size: 16px;
 
           &_faq {
-            color:#333;
+            color: #333;
             font-weight: 600;
             cursor: pointer;
             font-family: "Lexend", sans-serif;
@@ -123,17 +132,16 @@
           }
         }
 
-        &_button{
-          margin:13px 0px;
+        &_button {
           height: 44px;
           width: 100%;
           padding: 13px 0px 11px;
-          font-weight: 550;
-          color:#A3A3A3;
-          font-size: 14px;
+          font-weight: 600;
+          color: #a3a3a3;
+          font-size: 16px;
           outline: none;
-          background-color: #FFF;
-          border:1px solid #FFF;
+          background-color: #fff;
+          border: 1px solid #fff;
           cursor: pointer;
           box-shadow: 2px 2px 5px rgba(187, 187, 187, 0.25);
         }

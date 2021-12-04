@@ -1,12 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-import ModalRegister from './ModalRegister';
+import ModalRegister from "./ModalRegister";
+
+import ModalLogin from "./ModalLogin";
 
 function App() {
   return (
     <div className="App">
-      <ModalRegister/>
+      {/* <ModalRegister/> */}
+      <ModalLogin />
     </div>
   );
 }

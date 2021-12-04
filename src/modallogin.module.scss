@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  width: 1200px;
+  height: 100px;
+  margin: 0px auto;
+
+  &__login {
+    p {
+      font-weight: 550;
+      font-size: 20px;
+      color: #000;
+      cursor: pointer;
+    }
+  }
+
+  &__register {
+    p {
+      cursor: pointer;
+      font-weight: 550;
+      font-size: 20px;
+      color: #000;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Lexend", sans-serif;
+
+  &__layout {
+    display: flex;
+    width: 819px;
+    height: 484px;
+
+    &_left {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0px 34px;
+      background-image: url("https://www.bidu.com.vn/images/auth/auth_background.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-width: 317px;
+      width: 317px;
+      height: 100%;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    &_right {
+      width: calc(100% - 317px);
+      max-width: 100%;
+      height: 100%;
+
+      &_form {
+        padding: 17px 45px;
+        width: 100%;
+
+        &_title {
+          margin: 0px 0px 30px;
+          color: #000;
+          font-weight: 600;
+          font-size: 25px;
+        }
+
+        &_field {
+          position: relative;
+          margin: 13px 0px;
+          background-color: #f6f6f7;
+
+        
+          input {
+            padding: 3px 12px;
+            background-color: #f6f6f7;
+            color: #000;
+            border: 1px solid #f6f6f7;
+            outline: none;
+            height: 44px;
+            width: 381px;
+            max-width: 381px;
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          &_error {
+            position: absolute;
+            color: red;
+            top: 30%;
+            right: 10px;
+            margin: 0px;
+          }
+        }
+
+        &_subtitle {
+          text-align: center;
+          margin-bottom: 15px;
+          width: 100%;
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 16px;
+
+          &_faq {
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: "Lexend", sans-serif;
+            margin: 0px 4px;
+          }
+        }
+
+        &_button {
+          margin: 10px 0px;
+          height: 44px;
+          width: 100%;
+          padding: 13px 0px 11px;
+          font-weight: 600;
+          color: #a3a3a3;
+          font-size: 16px;
+          outline: none;
+          background-color: #fff;
+          border: 1px solid #fff;
+          cursor: pointer;
+          box-shadow: 2px 2px 5px rgba(187, 187, 187, 0.25);
+        }
+
+        &_social {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-direction: column;
+          margin: 38px 0px;
+          h3 {
+            font-family: "Lexend", sans-serif;
+            text-align: center;
+            font-size: 14px;
+            color: #000;
+            font-weight: 400;
+          }
+
+          &_list {
+            display: flex;
+            margin: 17px 0px 0px 0px;
+
+            img {
+              margin: 0px 11px;
+              width: auto;
+              height: 25px;
+              object-fit: cover;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &_forgot {
+          display: flex;
+          justify-content: center;
+
+          p {
+            margin: 0px;
+            color: #000;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+          }
+        }
+
+        &_signup {
+          display: flex;
+          justify-content: center;
+          margin: 10px 0px;
+
+          p {
+            margin: 0px;
+            font-weight: 400;
+            font-size: 16px;
+          }
+
+          &_promo {
+            font-weight: 650 !important;
+            color: #fd375e;
+          }
+        }
+      }
+    }
+  }
+}

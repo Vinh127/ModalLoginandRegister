@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Formik, Field, Form, useFormik, ErrorMessage } from "formik";
 
+import { Formik, Field, Form, useFormik, ErrorMessage } from "formik";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
 import formValidation from "./validation";
-import styles from "./modalregister.module.scss";
 
-function ModalRegister() {
+import styles from "./modallogin.module.scss";
+
+function ModalLogin() {
   const [isType, setIsType] = useState("");
   console.log("isType: ", isType);
 
   const [value, setValue] = useState(0);
-  console.log("value:", value);
 
   function handleSubmit() {}
 
@@ -34,7 +34,7 @@ function ModalRegister() {
         </div>
       </div>
 
-      <div className={`${styles.main} ${styles.login__modal}`}>
+      <div className={`${styles.main} ${styles.register__modal}`}>
         <div className={styles.main__layout}>
           <div className={styles.main__layout_left}>
             <img
@@ -45,31 +45,19 @@ function ModalRegister() {
 
           <div className={styles.main__layout_right}>
             <div className={styles.main__layout_right_form}>
-              <h3 className={styles.main__layout_right_form_title}>Đăng Ký</h3>
+              <h3 className={styles.main__layout_right_form_title}>
+                Đăng nhập
+              </h3>
               <Formik
                 initialValues={{
-                  userName: "",
                   userEmail: "",
                   userPassword: "",
-                  userPhoneNumber: "",
-                  userConfirmPwd:"",
                 }}
                 validationSchema={formValidation}
                 onSubmit={handleSubmit}
               >
                 {({ errors, touched }) => (
                   <Form>
-                    <div className={styles.main__layout_right_form_field}>
-                      <Field name="userName" placeholder="Họ và tên" />
-                      {errors.userName && touched.userName ? (
-                        <p
-                          className={styles.main__layout_right_form_field_error}
-                        >
-                          {errors.userName}
-                        </p>
-                      ) : null}
-                    </div>
-
                     <div className={styles.main__layout_right_form_field}>
                       <Field
                         id="userEmail"
@@ -102,57 +90,34 @@ function ModalRegister() {
                       ) : null}
                     </div>
 
-                    <div className={styles.main__layout_right_form_field}>
-                      <Field
-                        id="userConfirmPwd"
-                        name="userConfirmPwd"
-                        type="password"
-                        placeholder="Xác nhận mật khẩu"
-                      />
-                      {errors.userConfirmPwd && touched.userConfirmPwd ? (
-                        <p
-                          className={styles.main__layout_right_form_field_error}
-                        >
-                          {errors.userConfirmPwd}
-                        </p>
-                      ) : null}
-                    </div>
-
-                    <div className={styles.main__layout_right_form_field}>
-                      <PhoneInput value={value} onChange={setValue} />
-                    </div>
-
-                    <div className={styles.main__layout_right_form_subtitle}>
-                      <span>
-                        Tôi đồng ý với
-                        <span
-                          className={
-                            styles.main__layout_right_form_subtitle_faq
-                          }
-                        >
-                          Các Điều khoản Hệ thống
-                        </span>
-                        và
-                      </span>
-                      <br />
-                      <span>
-                        <span
-                          className={
-                            styles.main__layout_right_form_subtitle_faq
-                          }
-                        >
-                          Chính Sách Bảo Mật
-                        </span>
-                        của Bidu App
-                      </span>
-                    </div>
-
                     <button
                       className={styles.main__layout_right_form_button}
                       type="submit"
                     >
-                      Đăng ký
+                      Đăng nhập
                     </button>
+
+                    <div className={styles.main__layout_right_form_social}>
+                      <h3>Đăng nhập với tài khoản khác</h3>
+
+                      <div
+                        className={styles.main__layout_right_form_social_list}
+                      >
+                        <img src="https://www.bidu.com.vn/images/auth/google.svg" alt="" />
+                        <img src="https://www.bidu.com.vn/images/auth/facebook.svg" alt="" />
+                        <img src="https://www.bidu.com.vn/images/auth/zalo.svg" alt="" />
+                        <img src="https://www.bidu.com.vn/images/auth/apple.svg" alt="" />
+                      </div>
+                    </div>
+
+                    <div className={styles.main__layout_right_form_forgot}>
+                        <p>Quên mật khẩu??</p>
+                    </div>
+
+                    <div className={styles.main__layout_right_form_signup}>
+                        <p>Không có tài khoản?</p>
+                        <p className={styles.main__layout_right_form_signup_promo}>Đăng ký</p>
+                    </div>
                   </Form>
                 )}
               </Formik>
@@ -163,4 +128,4 @@ function ModalRegister() {
     </>
   );
 }
-export default ModalRegister;
+export default ModalLogin;
